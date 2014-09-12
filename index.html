@@ -1,6 +1,75 @@
+
 <!doctype html>
 <html>
-<body>
-This is a test page
-</body>
-</html>
+
+	<head>
+        <meta charset="utf-8">	
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Geeky | Samuel Nkoom Amoah</title>
+		<link rel="stylesheet" href="include/css/bootstrap.css">
+		<link rel="stylesheet" href="include/css/animations.css">
+		<link rel="stylesheet" href="include/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="include/css/style.css">	
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">	
+	</head>
+	
+	<body>
+				<canvas id="c"></canvas>
+
+				<div class="container">
+					<span class="title" style="white-space: pre"></span>
+					<a id="main_page_link" style="visibility: hidden" href="#1"></a>
+				</div>
+
+				<div class="main_page">
+					<ul class="nav">
+						<li onclick="changeContent('intro')"><span class="green">&lt</span>Intro<span class="green">&gt</span></li>
+						<li onclick="changeContent('interests')"><span class="green">&lt</span>Interests<span class="green">&gt</span></li>
+						<li onclick="changeContent('contact')"><span class="green">&lt</span>Contact me<span class="green">&gt</span></li>
+					</ul>
+
+					<div class="contentarea">
+							<div class="page" id="intro">
+								<img src="include/images/matrixMe.png">
+							</div>
+							<div class="page" id="interests">
+							</div>
+							<div class="page" id="contact">
+							</div>
+					</div>
+				</div>
+		<script src="include/js/script.js"></script>
+		<script src="include/js/jquery.js"></script>
+		<script src="include/js/typed.js"></script>
+		<script src="include/js/wankypages.jquery.js"></script>
+		<script src="include/js/modernizr.custom.js"></script>
+		<script>
+		$(function() {
+			$(".title").typed({strings: ["Hi...", "My name is ^700Samuel Nkoom ^200Amoah.", "I am ^700a programmer,", "a hacker,", "a backend developer,", "and a...", "^400G^700..E^700..E^700..K^1000."], typeSpeed: 20, backSpeed: 0, startDelay: 1000, loop: false, backDelay: 700, showCursor: false,
+
+				backspace: function(curString, curStrPos) {
+					setTimeout(function() {
+						if(self.arrayPos == 1) {
+							self.stopNum = 3;
+						}
+						else {
+							self.stopNum = 0;
+						}
+					});
+
+				},
+				
+				callback: function() {
+					$(".container").fadeOut(2000, function() {
+						//window.location = document.getElementById("main_page_link").href;
+						$(".main_page").animate({opacity: 1.0}, 2000);
+					});
+
+				} 
+			});
+		});
+		</script>		
+	</body>
+	
+</html
