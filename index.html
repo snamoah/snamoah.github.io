@@ -14,6 +14,8 @@
 
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -38,7 +40,7 @@
 			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
 
 				<h1 class="title">Hi,</h1>
-				<h2 class="subtitle">I'm Samuel Nkoom Amoah</h2>
+				<h2 class="subtitle" style="white-space:pre">I'm</h2>
 
 				<h3 class="tagline">
 					Skilled in<br>
@@ -95,5 +97,13 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="assets/js/modernizr.custom.72241.js"></script>
 <script src="assets/js/magister.js"></script>
+<script src="assets/js/typed.js"></script>
+<script>
+$(function() {
+	$(".subtitle").typed({strings: [" Samuel Nkoom Amoah.", " a backend developer,"], typeSpeed: 40, backSpeed: 500
+		 });	
+	});
+});
+</script>
 </body>
 </html>
