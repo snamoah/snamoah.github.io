@@ -1,9 +1,9 @@
 function randomStudentController($scope) {
 	$scope.path = "public/images/";
 	$scope.visible = false;
-	$scope.students = [{name: "Ayo", path: $scope.path + "ayo.jpg"}, 
+	$scope.students = [{name: "Ayodele", path: $scope.path + "ayo.jpg"}, 
 		//{name: "Blessing Onomesino", path: $scope.path +"blessing.jpg"}, 	
-		{name: "Esther Olatunde", path: $scope.path +"prince.jpg"}, 
+		{name: "Esther Olatunde", path: $scope.path +"esther.jpg"}, 
 		//{name: "Babara Okoto", path: $scope.path +"babara.jpg"},
 		{name: "Priscilla Hazel", path: $scope.path +"priscilla.jpg"},
 		{name: "Prince Anim", path: $scope.path+"prince.jpg"},
@@ -22,7 +22,7 @@ function randomStudentController($scope) {
 		{name: "Kwame Asiedu", path: $scope.path +"kwamea.jpg"},
 		{name: "Kwame Yeboah", path: $scope.path +"kwamey.jpg"},
 		//{name: "Jerry King", path: $scope.path +"jerry.jpg"},
-		{name: "Kelechi Uduagu", path: $scope.path +"kelechi.jpg"},
+		{name: "Kelechi Uduagu", path: $scope.path +"kelechi.JPG"},
 		{name: "Afi Kwao", path: $scope.path +"afi.jpg"},
 		{name: "Moses Abubakari", path: $scope.path +"moses.jpg"},
 		{name: "Benjamin Kissi", path: $scope.path +"ben.jpg"},
