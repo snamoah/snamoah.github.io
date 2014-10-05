@@ -10,7 +10,7 @@ function randomStudentController($scope) {
 		{name: "David Evhade", path: $scope.path +"david.jpg"},
 		//{name: "Kennedy Anyinatoe", path: $scope.path +"kennedy.jpg"},
 		{name: "Ike Owoh", path: $scope.path +"ike.jpg"},
-		{name: "Innocent Udeogu", path: $scope.path +"innocent.JPG"},
+		{name: "Innocent Udeogu", path: $scope.path +"innocent.jpg"},
 		//{name: "Philip Nunoo", path: $scope.path +"philip.jpg"},
 		{name: "Cassandra Sarfo", path: $scope.path +"cassandra.jpg"},
 		{name: "Derik Frimpong", path: $scope.path +"derek.jpg"},
@@ -22,13 +22,13 @@ function randomStudentController($scope) {
 		{name: "Kwame Asiedu", path: $scope.path +"kwamea.jpg"},
 		{name: "Kwame Yeboah", path: $scope.path +"kwamey.jpg"},
 		//{name: "Jerry King", path: $scope.path +"jerry.jpg"},
-		{name: "Kelechi Uduagu", path: $scope.path +"kelechi.JPG"},
+		{name: "Kelechi Uduagu", path: $scope.path +"kelechi.jpg"},
 		{name: "Afi Kwao", path: $scope.path +"afi.jpg"},
 		{name: "Moses Abubakari", path: $scope.path +"moses.jpg"},
 		{name: "Benjamin Kissi", path: $scope.path +"ben.jpg"},
 		{name: "Abideen Adeleye", path: $scope.path +"abideen.jpg"},
 		{name: "Alexander Okereke", path: $scope.path +"alex.jpg"},
-		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.png"}];
+		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"}];
 
 	$scope.randomStudents = [" ", " ", " "];
 
