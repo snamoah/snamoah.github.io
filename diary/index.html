@@ -1,0 +1,96 @@
+<!doctype html>
+<html ng-app="">
+	<head>
+		<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="public/css/style.css">
+	</head>
+
+	<body>
+		<div ng-init="name='World!'">
+			<h1>Hello, {{name}}</h1>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2" style="background: #489287; padding: 10px 0px 0px 10px">
+					<form class="form-horizontal" style="margin-left: 10px">
+						<div class="form-group">
+							<button type="button" class="btn btn-default">Create new Notebook</button>
+						</div>
+						<div class="form-group">
+							<h3>Notebook lists</h3>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-md-10">
+					<div class="container">
+						<div class="flipbook">
+							<div class="cover-first" style="background: #eee829">
+								<h1 class="text-center">My Diary</h1>
+							</div>
+							<div style="background: #578372"></div>
+							<div ng-repeat="i in 10"><textarea class="leaf">This is inside it</textarea></div>
+							<div><textarea class="leaf">This is inside it</textarea></div>
+							<div><textarea class="leaf">This is inside it</textarea></div>
+							<div><textarea class="leaf">This is inside it</textarea></div>
+							<div><textarea class="leaf">This is inside it</textarea></div>
+							<div style="background: #578372"></div>
+							<div class="cover-last" style="background: #eee829"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JAVASCRIPT IMPORTS -->
+		<div>
+			<script src="public/js/libs/angular/angular.min.js"></script>
+			<script src="public/js/libs/angular/angular-route.min.js"></script>
+			<script src="public/js/libs/turnjs/modernizr.2.5.3.min.js"></script>
+			<script src="public/js/app.js"></script>
+
+			<!-- import bootstrap files -->
+			<script src="public/bootstrap/js/jquery.js"></script>
+			<script src="public/bootstrap/js/bootstrap.min.js"></script>
+			<script src="public/bootstrap/js/affix.js"></script>
+			<script src="public/bootstrap/js/alert.js"></script>
+			<script src="public/bootstrap/js/button.js"></script>
+			<script src="public/bootstrap/js/carousel.js"></script>
+			<script src="public/bootstrap/js/collapse.js"></script>
+			<script src="public/bootstrap/js/dropdown.js"></script>
+			<script src="public/bootstrap/js/modal.js"></script>
+			<script src="public/bootstrap/js/popover.js"></script>
+			<script src="public/bootstrap/js/scrollspy.js"></script>
+			<script src="public/bootstrap/js/tab.js"></script>
+			<script src="public/bootstrap/js/tooltip.js"></script>
+			<script src="public/bootstrap/js/transition.js"></script>
+
+			<!-- turnJS imports -->
+			<script type="text/javascript">
+
+				var flipbook = $('.flipbook');
+
+				function loadApp() {
+					flipbook.turn({
+						elevation: 50,
+						autoCenter: true,
+						gradients: true,
+						width: 900,
+						height: 500
+					});
+
+					flipbook.turn('page', 3);
+				}
+
+				yepnope({
+					test : Modernizr.csstransforms,
+					yep: ['public/js/libs/turnjs/turn.min.js'],
+					nope: ['public/js/libs/turnjs/turn.html4.min.js'],
+					both: ['public/css/style.css'],
+					complete: loadApp
+				});
+			</script>
+		</div>
+	</body>
+</html>

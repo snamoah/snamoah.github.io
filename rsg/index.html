@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="">
+	<head>
+		<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="public/css/style.css">
+	</head>
+
+	<body ng-controller="randomStudentController">
+		
+		<div class="container" style="margin-top: 10%">
+			<div class="row">
+				<div class="hidden-xs col-md-4"></div>
+				<div class="col-xs-12 col-md-4">
+					<button type="button" class="btn btn-primary btn-lg" style="width: 100%" ng-click="generateStudent()">Generate Random EIT</button>
+				</div>
+				<div class="hidden-xs col-md-4"></div>
+			</div>
+		</div>
+		<div class="container" style="margin-top: 10%;">
+			<div class="row">
+				<div class="col-md-4 col-xs-12" ng-repeat="eit in randomStudents track by $index">
+					<div class="thumbnail center" style="width: 200px;" ng-show="visible">
+						<img src={{eit.path}} style="width: 200px; height: 200px;">
+					</div>
+					<h3 class="text-center">{{eit.name}}</h3>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- JAVASCRIPT IMPORTS -->
+		<div>
+			<script src="public/js/app.js"></script>
+			<script src="public/libs/angular.min.js"></script>
+			<script src="public/js/controllers/randomStudentController.js"></script>
+			<script src="public/libs/angular-route.min.js"></script>
+			<!-- import bootstrap files -->
+			<script src="public/bootstrap/js/jquery.js"></script>
+			<script src="public/bootstrap/js/bootstrap.min.js"></script>
+			<script src="public/bootstrap/js/affix.js"></script>
+			<script src="public/bootstrap/js/alert.js"></script>
+			<script src="public/bootstrap/js/button.js"></script>
+			<script src="public/bootstrap/js/carousel.js"></script>
+			<script src="public/bootstrap/js/collapse.js"></script>
+			<script src="public/bootstrap/js/dropdown.js"></script>
+			<script src="public/bootstrap/js/modal.js"></script>
+			<script src="public/bootstrap/js/popover.js"></script>
+			<script src="public/bootstrap/js/scrollspy.js"></script>
+			<script src="public/bootstrap/js/tab.js"></script>
+			<script src="public/bootstrap/js/tooltip.js"></script>
+			<script src="public/bootstrap/js/transition.js"></script>
+		</div>
+	</body>
+</html>

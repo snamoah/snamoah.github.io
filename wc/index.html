@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="">
+	<head>
+		<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="public/css/style.css">
+	</head>
+
+	<body>
+		<div class="container vertical-center-row" ng-controller="wordsController">
+			<div class="row">
+				<div class="col-xs-6 center">
+					<textarea class="form-control wordTextArea" style="width: 100%;" rows="10" ng-model="text"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 center">
+					<h3>{{ numberOfWords() }} word(s)</h3>
+				</div>
+			</div>
+		</div>
+		<!-- JAVASCRIPT IMPORTS -->
+		<div>
+			<script src="public/js/app.js"></script>
+			<script src="public/js/libs/angular/angular.min.js"></script>
+			<script src="public/js/libs/angular/angular-route.min.js"></script>
+			<script src="public/js/controllers/wordsController.js"></script>
+
+			<!-- import bootstrap files -->
+			<script src="public/bootstrap/js/jquery.js"></script>
+			<script src="public/bootstrap/js/bootstrap.min.js"></script>
+			<script src="public/bootstrap/js/affix.js"></script>
+			<script src="public/bootstrap/js/alert.js"></script>
+			<script src="public/bootstrap/js/button.js"></script>
+			<script src="public/bootstrap/js/carousel.js"></script>
+			<script src="public/bootstrap/js/collapse.js"></script>
+			<script src="public/bootstrap/js/dropdown.js"></script>
+			<script src="public/bootstrap/js/modal.js"></script>
+			<script src="public/bootstrap/js/popover.js"></script>
+			<script src="public/bootstrap/js/scrollspy.js"></script>
+			<script src="public/bootstrap/js/tab.js"></script>
+			<script src="public/bootstrap/js/tooltip.js"></script>
+			<script src="public/bootstrap/js/transition.js"></script>
+		</div>
+	</body>
+</html>
