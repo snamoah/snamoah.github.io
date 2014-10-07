@@ -33,7 +33,7 @@
 							</div>
 							<div style="background: #578372"></div>
 							<div ng-repeat="i in 10"><textarea class="leaf">This is inside it</textarea></div>
-							<div><textarea class="leaf">Hello Samuel, </textarea></div>
+							<div><textarea class="leaf">Hello Samuel,</textarea></div>
 							<div><textarea class="leaf"></textarea></div>
 							<div><textarea class="leaf"></textarea></div>
 							<div><textarea class="leaf"></textarea></div>
@@ -82,6 +82,25 @@
 					});
 
 					flipbook.turn('page', 3);
+
+					$('textarea').keypress(function(e) {
+						var lineHeight = parseInt($(this).css('line-height').replace('px', ''));
+						var cols = 65;
+
+						var numberOfLines = Math.ceil($(this).val().length / cols);
+
+						var prevLineCount = 1;
+
+						var lineCount = $(this).val().split(/\r|\r\n|\n/).length;
+
+						if(lineCount >= 27 || numberOfLines >= 27)
+							alert("Over due");
+					});
+				}
+
+
+				function getLines() {
+					return Math.floor($('textarea').height() / 15);
 				}
 
 				yepnope({

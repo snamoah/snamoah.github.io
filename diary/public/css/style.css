@@ -34,15 +34,36 @@ body {
 	border-bottom: 1px solid silver;
 }
 
-.flipbook .leaf {
-	border-style: none;
-	width: 100%;
-	height: 100%;
-	padding: 57px 20px 20px 60px;
+.flipbook .page {
 	background: url(../images/page.PNG);
 	background-size: 100% 100%;
 }
 
+.flipbook .leaf {
+	border-style: none;
+	width: 100%;
+	height: 100%;
+	padding: 60px 20px 20px 60px;
+	line-height: 15px;
+}
+
+.flipbook .even .leaf {
+	background:-webkit-gradient(linear, left top, right top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, #dadada));
+	background-image:-webkit-linear-gradient(left, rgba(0,0,0,0) 95%, #dadada 100%);
+	background-image:-moz-linear-gradient(left, rgba(0,0,0,0) 95%, #dadada 100%);
+	background-image:-ms-linear-gradient(left, rgba(0,0,0,0) 95%, #dadada 100%);
+	background-image:-o-linear-gradient(left, rgba(0,0,0,0) 95%, #dadada 100%);
+	background-image:linear-gradient(left, rgba(0,0,0,0) 95%, #dadada 100%);
+}
+
+.flipbook .odd .leaf {
+	background:-webkit-gradient(linear, right top, left top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, #cacaca));
+	background-image:-webkit-linear-gradient(right, rgba(0,0,0,0) 95%, #cacaca 100%);
+	background-image:-moz-linear-gradient(right, rgba(0,0,0,0) 95%, #cacaca 100%);
+	background-image:-ms-linear-gradient(right, rgba(0,0,0,0) 95%, #cacaca 100%);
+	background-image:-o-linear-gradient(right, rgba(0,0,0,0) 95%, #cacaca 100%);
+	background-image:linear-gradient(right, rgba(0,0,0,0) 95%, #cacaca 100%);
+}
 textarea:focus textarea:active {
 	border-style: none;
 }
