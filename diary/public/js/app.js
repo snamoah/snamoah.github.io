@@ -1,7 +1,7 @@
 angular.module('notebookApp', [])
-	.controller('mainController', ['$scope', '$http', function($scope, $http) {
-		$http.get("http://thomasgerrald.esy.es/index.php")
-		.success( function(response) {
-			$scope.names = response;
+	.controller('mainController', ['$scope', '$http', '$templateCache' function($scope, $http, $templateCache) {
+		$http({method: "JSONP", url: "http://thomasgerrald.esy.es/index.php", cache: $templateCache})
+		.success(function(data, status) {
+			$scope.names = data;
 		});
 	}]);
