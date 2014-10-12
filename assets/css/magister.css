@@ -152,10 +152,14 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin-bottom:40px; 
 }
 .tagline { 
-	font-size:1.4em;
+	font-size:1.7em;
 	line-height:1.3em;
 	font-weight:normal;
 	margin-bottom:75px;
+}
+
+.tagline small {
+	font-size: 0.9em;
 }
 
 @media (max-width: 767px) {
