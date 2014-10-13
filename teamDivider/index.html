@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="teamDividerApp">
+	<head>
+		<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="public/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="container-fluid" ng-controller="teamsController">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-4">
+					<h2>Members per team: 
+						<div class="input-group input-group-lg">
+							<input type="number" min="2" ng-model="number" class="form-control">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-primary" ng-click="generateTable(number)">GO</button>
+							</div>
+						</div>
+					</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					{{names}}
+				</div>
+				<div class="col-md-4">
+					{{displayIndexes()}}
+				</div>
+			</div>
+		</div>
+
+		<!-- JAVASCRIPT IMPORTS -->
+		<div>
+			<script src="public/js/libs/angular/angular.min.js"></script>
+			<script src="public/js/libs/angular/angular-route.min.js"></script>
+			<script src="public/js/services/studentsService.js"></script>
+			<script src="public/js/app.js"></script>
+
+			<!-- import bootstrap files -->
+			<script src="public/bootstrap/js/jquery.js"></script>
+			<script src="public/bootstrap/js/bootstrap.min.js"></script>
+			<script src="public/bootstrap/js/affix.js"></script>
+			<script src="public/bootstrap/js/alert.js"></script>
+			<script src="public/bootstrap/js/button.js"></script>
+			<script src="public/bootstrap/js/carousel.js"></script>
+			<script src="public/bootstrap/js/collapse.js"></script>
+			<script src="public/bootstrap/js/dropdown.js"></script>
+			<script src="public/bootstrap/js/modal.js"></script>
+			<script src="public/bootstrap/js/popover.js"></script>
+			<script src="public/bootstrap/js/scrollspy.js"></script>
+			<script src="public/bootstrap/js/tab.js"></script>
+			<script src="public/bootstrap/js/tooltip.js"></script>
+			<script src="public/bootstrap/js/transition.js"></script>
+		</div>
+	</body>
+</html>

@@ -249,6 +249,9 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin:0 auto;
 }
 
+.mainmenu ul{
+  font-size: 1em;
+}
 
 
 
