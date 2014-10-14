@@ -24,7 +24,11 @@
 							<h3>Notebook lists</h3>
 						</div>
 						<div class="form-group">
-							{{names.name + ", " + noteId}}
+							<ul>
+								<li ng-repeat="l in lists">
+									<a href="" ng-click="selectNotebook(l.id)">{{l.name}}</a>
+								</li>
+							</ul>
 						</div>
 					</form>
 				</div>

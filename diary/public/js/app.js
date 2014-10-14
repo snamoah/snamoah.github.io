@@ -1,30 +1,37 @@
 angular.module('notebookApp', [])
 	.controller('mainController', ['$scope', '$http', '$templateCache', function($scope, $http, $templateCache) {
-		$scope.names = {name: "test", text: "test"};
 		$scope.status = "";
-
 		var url = "http://thomasgerrald.esy.es/test.php";
+
+ 		//notebook lists
+		$http.get(url+"?lists=JSON_CALLBACK").
+		success(function (data) {
+			$scope.lists = data;
+		}).
+		error(function (data) {
+			console.log("Could not get lists of notebooks: " + data);
+		});
+		
+		//This runs for first load
 		$http.get(url+"?first_load=JSON_CALLBACK")
-		//$http.post({method: "JSONP", url: "http://thomasgerrald.esy.es/index.php", cache: $templateCache})
 		.success(function (data) {
-			$scope.names = data;
 			$scope.noteId = data['id'];
 			$scope.content = data['text'];
-			//$scope.status = status;
 		});
-		// .error(function (data, status) {
-		// 	// body...
-		// 	$scope.names = "Could not get data";
-		// 	$scope.status = status;
-		// });
 
+		//Create notebook function
 		$scope.createNotebook =  function() {
 			$http.get(url+"?create=JSON_CALLBACK")
-			.success(function (data) {
-				$scope.names = data;
+			.success(function (data) {	
+				$scope.noteId = data['id'];
+				$scope.content = data['text'];
+			}).
+			error(function (data) {
+				console.log("Could not create notebook: " + data);
 			});
 		};
 
+        //save notes function
 		$scope.saveNotes = function() {
 			$http({
 				url: "http://thomasgerrald.esy.es/save.php",
@@ -42,4 +49,12 @@ angular.module('notebookApp', [])
 				console.log("It sent it: " + data);
 			});
 		};
+
+		$scope.selectNotebook = function(id) {
+			$http.get(url+"?id=" + id).
+			success(function (data) {
+				$scope.noteId = data['id'];
+				$scope.content = data['text'];
+			});
+		}
 	}]);

@@ -37,8 +37,12 @@ angular.module('teamDividerApp', [])
 
 		
 		$scope.generateTable = function(number) {
+			var numberOfTeams = Math.floor($scope.students.length / number);
+
 			$scope.indexes = $scope.randomize();
-			$scope.names = [$scope.students[$scope.indexes[1]], $scope.indexes[1], number];
+			$scope.names = [$scope.students[$scope.indexes[1]], $scope.indexes[1], number, numberOfTeams];
+
+
 		};
 
 		$scope.displayIndexes = function() {
