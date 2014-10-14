@@ -22,12 +22,11 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-4">
-					{{names}}
-				</div>
-				<div class="col-md-4">
-					{{displayIndexes()}}
-				</div>
+				<table>
+					<tr ng-repeat="team in names">
+						<td ng-repeat="member in team">{{member.name}}</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 

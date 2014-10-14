@@ -40,9 +40,23 @@ angular.module('teamDividerApp', [])
 			var numberOfTeams = Math.floor($scope.students.length / number);
 
 			$scope.indexes = $scope.randomize();
-			$scope.names = [$scope.students[$scope.indexes[1]], $scope.indexes[1], number, numberOfTeams];
+			//$scope.names = [$scope.students[$scope.indexes[1]], $scope.indexes[1], number, numberOfTeams];
 
+			$scope.teams = [];
 
+			var count = 0;
+			for(var i = 0; i < numberOfTeams; i++) {
+				var row = [];
+				for(var j = 0; j < number; j++) {
+					if(count < $scope.students.length) {
+						row.push($scope.students[$scope.indexes[count]]);
+					}
+					count++;
+				};
+				$scope.teams.push(row);
+			};
+
+			$scope.names = $scope.teams;
 		};
 
 		$scope.displayIndexes = function() {
