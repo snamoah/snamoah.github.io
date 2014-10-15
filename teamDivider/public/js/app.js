@@ -3,33 +3,33 @@ angular.module('teamDividerApp', [])
 
 		var student_path = "/public/images/";
 		$scope.students = [{name: "Ayo", path: student_path + "ayo.jpg"}, 
-		{name: "Blessing Onomesino", path: student_path +"blessing.jpg"}, 	
-		{name: "Esther Olatunde", path: student_path +"prince.jpg"}, 
-		{name: "Babara Okoto", path: student_path +"babara.jpg"},
-		{name: "Priscilla Hazel", path: student_path +"priscilla.jpg"},
-		{name: "Prince Anim", path: student_path+"prince.jpg"},
-		{name: "David Evhade", path: student_path +"david.jpg"},
-		{name: "Kennedy Anyinatoe", path: student_path +"kennedy.jpg"},
-		{name: "Ike Owoh", path: student_path +"ike.jpg"},
-		{name: "Innocent Udeogu", path: student_path +"innocent.JPG"},
-		{name: "Philip Nunoo", path: student_path +"philip.jpg"},
-		{name: "Cassandra Sarfo", path: student_path +"cassandra.jpg"},
-		{name: "Derek Frimpong", path: student_path +"derek.jpg"},
-		{name: "Panin Tenkorang", path: student_path +"panin.jpg"},
-		{name: "Paul Damalie", path: student_path +"paul.jpg"},
-		{name: "Barnabas Ayinloya", path: student_path +"barnabas.jpg"},
-		{name: "Laud Bruce Tagoe", path: student_path +"laudbruce.jpg"},
+		{name: "Blessing", path: student_path +"blessing.jpg"}, 	
+		{name: "Esther", path: student_path +"prince.jpg"}, 
+		{name: "Babara", path: student_path +"babara.jpg"},
+		{name: "Priscilla", path: student_path +"priscilla.jpg"},
+		{name: "Prince", path: student_path+"prince.jpg"},
+		{name: "David", path: student_path +"david.jpg"},
+		{name: "Kennedy", path: student_path +"kennedy.jpg"},
+		{name: "Ike", path: student_path +"ike.jpg"},
+		{name: "Innocent", path: student_path +"innocent.JPG"},
+		{name: "Philip", path: student_path +"philip.jpg"},
+		{name: "Cassandra", path: student_path +"cassandra.jpg"},
+		{name: "Derek", path: student_path +"derek.jpg"},
+		{name: "Panin", path: student_path +"panin.jpg"},
+		{name: "Paul", path: student_path +"paul.jpg"},
+		{name: "Barnabas", path: student_path +"barnabas.jpg"},
+		{name: "Laud Bruce", path: student_path +"laudbruce.jpg"},
 		{name: "Laud Bentil", path: student_path +"laudbentil.jpg"},
-		{name: "Kwame Asiedu", path: student_path +"kwamea.jpg"},
-		{name: "Kwame Yeboah", path: student_path +"kwamey.jpg"},
-		{name: "Jerry King", path: student_path +"jerry.jpg"},
-		{name: "Kelechi Uduagu", path: student_path +"kelechi.JPG"},
-		{name: "Afi Kwao", path: student_path +"afi.jpg"},
-		{name: "Moses Abubakari", path: student_path +"moses.jpg"},
-		{name: "Benjamin Kissi", path: student_path +"ben.jpg"},
-		{name: "Abideen Adeleye", path: student_path +"abideen.jpg"},
-		{name: "Alexander Okereke", path: student_path +"alex.jpg"},
-		{name: "Samuel Nkoom Amoah", path: student_path +"samuel.png"}];
+		{name: "Kwame", path: student_path +"kwamea.jpg"},
+		{name: "Kwame", path: student_path +"kwamey.jpg"},
+		{name: "Jerry", path: student_path +"jerry.jpg"},
+		{name: "Kelechi", path: student_path +"kelechi.JPG"},
+		{name: "Afi", path: student_path +"afi.jpg"},
+		{name: "Moses", path: student_path +"moses.jpg"},
+		{name: "Benjamin", path: student_path +"ben.jpg"},
+		{name: "Abideen", path: student_path +"abideen.jpg"},
+		{name: "Alexander", path: student_path +"alex.jpg"},
+		{name: "Samuel", path: student_path +"samuel.png"}];
 
 		$scope.names = "";
 		$scope.indexes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
@@ -45,9 +45,9 @@ angular.module('teamDividerApp', [])
 			$scope.teams = [];
 
 			var count = 0;
-			for(var i = 0; i < numberOfTeams; i++) {
+			for(var i = 0; i < number; i++) {
 				var row = [];
-				for(var j = 0; j < number; j++) {
+				for(var j = 0; j < numberOfTeams; j++) {
 					if(count < $scope.students.length) {
 						row.push($scope.students[$scope.indexes[count]]);
 					}
