@@ -30,24 +30,37 @@ function randomStudentController($scope) {
 		{name: "Alexander Okereke", path: $scope.path +"alex.jpg"},
 		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"}];
 
-	$scope.randomStudents = [" ", " ", " "];
+  $scope.single = false;
+
+  if( $scope.single )
+    $scope.randomStudents = [" "];
+  else
+	  $scope.randomStudents = [" ", " ", " "];
+
 
 	$scope.generateStudent = function() {
+    if( $scope.single )
+      $scope.randomStudents = [" "];
+    else
+      $scope.randomStudents = [" ", " ", " "];
+
 		$scope.randomStudents[0] = $scope.students[Math.floor(Math.random() * $scope.students.length)];
 		$scope.student = $scope.randomStudents[0];
 
-		while($scope.student == $scope.randomStudents[0]) {
-			$scope.student = $scope.students[Math.floor(Math.random() * $scope.students.length)];
-		}
-		
-		$scope.randomStudents[1] = $scope.student;
-		
-		while($scope.student == $scope.randomStudents[0] || $scope.student == $scope.randomStudents[1]) {
-			$scope.student = $scope.students[Math.floor(Math.random() * $scope.students.length)];
-		}
+    if( !$scope.single ){
+      while($scope.student == $scope.randomStudents[0]) {
+        $scope.student = $scope.students[Math.floor(Math.random() * $scope.students.length)];
+      }
+      
+      $scope.randomStudents[1] = $scope.student;
+      
+      while($scope.student == $scope.randomStudents[0] || $scope.student == $scope.randomStudents[1]) {
+        $scope.student = $scope.students[Math.floor(Math.random() * $scope.students.length)];
+      }
 
 
-		$scope.randomStudents[2] = $scope.student;
+      $scope.randomStudents[2] = $scope.student;
+    }
 		$scope.visible = true;
 	};
 }
