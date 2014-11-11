@@ -22,7 +22,9 @@
 			</div>
 
 			<div class="row" style="margin-top: 5%">
-				<table class="table table-bordered">
+          <tr ng-init="count = 0" ng-hide="show">
+            <th ng-repeat="member in team[0]">Team {{ count = count + 1 }}</th>
+          </tr>
 					<tr ng-repeat="team in names">
 						<td ng-repeat="member in team">{{member.name}}</td>
 					</tr>
