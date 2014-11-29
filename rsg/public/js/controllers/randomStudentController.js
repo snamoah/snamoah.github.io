@@ -24,11 +24,11 @@ function randomStudentController($scope) {
 		{name: "Jerry King", path: $scope.path +"jerry.jpg"},
 		{name: "Kelechi Uduagu", path: $scope.path +"kelechi.JPG"},
 		{name: "Afi Kwao", path: $scope.path +"afi.jpg"},
-		{name: "Moses Abubakari", path: $scope.path +"moses.jpg"},
 		{name: "Benjamin Kissi", path: $scope.path +"ben.jpg"},
 		{name: "Abideen Adeleye", path: $scope.path +"abideen.jpg"},
 		{name: "Alexander Okereke", path: $scope.path +"alex.jpg"},
-		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"}];
+		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"},
+		{name: "Ijeoma", path: $scope.path +"ijeoma.jpg"}];
 
   $scope.single = false;
 
