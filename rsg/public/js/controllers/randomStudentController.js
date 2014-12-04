@@ -27,7 +27,7 @@ function randomStudentController($scope) {
 		{name: "Benjamin Kissi", path: $scope.path +"ben.jpg"},
 		{name: "Abideen Adeleye", path: $scope.path +"abideen.jpg"},
 		{name: "Alexander Okereke", path: $scope.path +"alex.jpg"},
-		{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"},
+		//{name: "Samuel Nkoom Amoah", path: $scope.path +"samuel.jpg"},
 		{name: "Ijeoma", path: $scope.path +"ijeoma.jpg"}];
 
   $scope.single = false;
