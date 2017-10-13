@@ -35,7 +35,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: #f5e4b9 url('../images/profile.png') no-repeat;
+  background: #f5e4b9 url('../images/profile.jpg') no-repeat;
   background-position: bottom left;
   background-origin: content-box;
   background-size: contain;
