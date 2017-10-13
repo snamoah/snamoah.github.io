@@ -52,9 +52,19 @@ header > .headline {
   margin-right: 15%;
 }
 
+.headline h1 {
+  letter-spacing: 0.05em;
+}
+
+.headline h4 {
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
 .headline h1, h4 {
   margin: 0px auto 10px auto;
 }
+
 
 section {
   min-height: 400px; 
@@ -77,4 +87,10 @@ section.inverse {
 
 .links a {
   color: #222;
+  transition: border-radius 0.5s;
+  -webkit-transition: border-radius 0.5s;
+}
+
+.links a:hover {
+  border-radius: 5px;
 }
