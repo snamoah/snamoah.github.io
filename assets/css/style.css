@@ -85,6 +85,10 @@ section.inverse {
   margin: 5px;
 }
 
+.links {
+  min-width: 200px;
+}
+
 .links a {
   color: #222;
   transition: border-radius 0.5s;
